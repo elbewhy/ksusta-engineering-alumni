@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3D Carousel</title>
+  <style>
+    .swiper {
+      width: 300px;
+      height: 480px;
+    }
+
+    #swiper {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 450px;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+<link rel="stylesheet" href="../vendor/swiper/bundle.min.css" />
+<script src="../vendor/swiper/bundle.min.js"></script>
+
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <img src="../assets/IMG_0050.jpg" width="200px" height="300px" class="swiper-slide"></img>
+    <img src="../assets/IMG_0140.jpg" width="200px" height="300px" class="swiper-slide"></img>
+    <img src="../assets/mal. abu musa.jpg" width="200px" height="300px" class="swiper-slide"></img>
+    <img src="../assets/mal.yazeed.jpg" width="200px" height="300px" class="swiper-slide"></img>
+  </div>
+</div>
+
+<script>
+  const sweet = new Swiper('.swiper', {
+    direction: 'horizontal',
+    loop: true,
+    speed: 2000,
+    spaceBetween: 100,
+    effect: 'cube',
+    watchSlidesProgress: true,
+    autoplay: {
+      delay: 2000, // Set the delay in milliseconds
+      disableOnInteraction: false, // Autoplay continues after user interactions
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      dynamicBullets: true,
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+</script>
+</body>
+</html>
